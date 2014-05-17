@@ -60,6 +60,7 @@ a:hover{
 	top: 85px;
 	left: 0;
 	position: absolute;
+	z-index: -25;
 }
 
 #post{
