@@ -1,0 +1,139 @@
+
+body{
+	background-color: #0E0F11;
+	color: #1E222A;
+	font-family: Arial, Verdana;
+}
+
+h3{
+	padding: 5px;
+	background-color: #1E222A;
+	color: #ddd;
+}
+
+p{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+a:link{
+	color: #5b6489;
+}
+
+a:visited{
+	color: #3b4449;
+}
+
+a:hover{
+	color: #686c8d;
+}
+
+#top{
+	background-color: #1E222A;
+	width: 100%;
+	height: 75px;
+	top: 0;
+	left: 0;
+	position: fixed;
+}
+
+#divider{
+	background-color: #53565B;
+	width: 100%;
+	height: 10px;
+	top: 75px;
+	left: 0;
+	position: fixed;
+}
+
+#title{
+	width: 430px;
+	margin-left: -215px;
+	left: 50%;
+	top: 10px;
+	position: relative;
+}
+
+#content{
+	width: 100%;
+	height: 100%;
+	top: 85px;
+	left: 0;
+	position: absolute;
+}
+
+#post{
+	background-color: #cccccc;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	padding: 2px 10px 10px 10px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#post h2{
+	color: #000;
+	font-size: 35px;
+	font-family: Arial;
+	margin-bottom: 0;
+	margin-top: 5px;
+}
+
+#date{
+	text-align: bottom;
+	padding-left: 10px;
+	margin-top: 23px;
+}
+
+#postFooter{
+	color: #777777;
+}
+
+.btn{
+	padding: 5px;
+	color: #ddd;
+	background-color: #344669;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+a.btn{
+	color: #ddd;
+	text-decoration: none;
+}
+
+a.btn:link{
+	color: #ddd;
+	text-decoration: none;
+}
+
+a.btn:visited{
+	color: #ddd;
+	text-decoration: none;
+}
+
+.btn:hover{
+	background-color: #445679;
+}
+
+.float-left{
+	float: left;
+}
+
+.imgCenter{
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.clear{
+	clear: both;
+}
+
+.shadow {
+	-webkit-box-shadow: 12px 12px 6px -6px #777;
+	   -moz-box-shadow: 12px 12px 6px -6px #777;
+	        box-shadow: 12px 12px 6px -6px #777;
+}
