@@ -128,3 +128,9 @@ a:hover{
 	font-weight: bold;
 	font-family: Verdana;
 }
+
+.shadow {
+	-webkit-box-shadow: 0 8px 12px -6px black;
+	   -moz-box-shadow: 0 8px 12px -6px black;
+	        box-shadow: 0 8px 12px -6px black;
+}
