@@ -8,11 +8,11 @@ body{
 }
 
 a:link{
-	color: #364464;
+	color: #F7EACF;
 }
 
 a:visited{
-	color: #525A6B;
+	color: #B8A682;
 }
 
 a:active{
@@ -20,7 +20,7 @@ a:active{
 }
 
 a:hover{
-	color: #000;
+	color: #CED8F1;
 }
 
 .w1 a:link{
