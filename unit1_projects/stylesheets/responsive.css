@@ -71,6 +71,7 @@ h3{
 	font-family: 'Calligraffitti', cursive;
 	font-size: 1.250em;
 	padding: 2%;
+	color: #6e82b6;
 }
 
 p{
@@ -90,3 +91,28 @@ img{
 img:after{
 	clear: both;
 }
+
+@media (max-width: 500px){
+
+	h3{
+		font-family: Times;
+		font-size: 1em;
+		font-weight: bold;
+		padding: 2%;
+		text-decoration: underline;
+		color: #6e82b6;
+	}
+
+	article{
+		width: 300px;
+		padding: 5%;
+	}
+
+	p{
+		font-family: Verdana;
+		font-size: 0.75em;
+		padding: 2%;
+		width: 260px;	
+	}
+}
+
