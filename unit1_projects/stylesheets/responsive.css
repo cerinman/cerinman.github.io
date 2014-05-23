@@ -92,10 +92,10 @@ img:after{
 	clear: both;
 }
 
-@media (max-width: 480px){
+@media (max-width: 460px){
 
 	body{
-		width: 260px;
+		width: 250px;
 		margin-left: auto;
 		margin-right: auto;
 		background-color: #333;
@@ -103,7 +103,7 @@ img:after{
 	}
 
 	footer{
-		width: 260px;
+		width: 250px;
 		margin: auto;
 		padding: 2%;
 		color: #777;
@@ -111,7 +111,7 @@ img:after{
 	}
 
 	#main, #content {
-		width: 260px;
+		width: 250px;
 		margin: auto;
 	}
 
@@ -119,7 +119,7 @@ img:after{
 		font-size: 2em;
 		padding: 0 0 1% 0;
 		color: #6e82b6;
-		width: 240px;
+		width: 230px;
 	}
 
 	h3{
@@ -129,11 +129,11 @@ img:after{
 		padding: 1%;
 		text-decoration: underline;
 		color: #6e82b6;
-		width: 240px;
+		width: 230px;
 	}
 
 	article{
-		width: 240px;
+		width: 230px;
 		padding: 2%;
 	}
 
@@ -141,7 +141,7 @@ img:after{
 		font-family: Verdana;
 		font-size: 0.75em;
 		padding: 1%;
-		width: 240px;	
+		width: 230px;	
 	}
 }
 
