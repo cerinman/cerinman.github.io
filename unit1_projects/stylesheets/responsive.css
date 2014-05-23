@@ -92,14 +92,34 @@ img:after{
 	clear: both;
 }
 
-@media (max-width: 500px){
+@media (max-width: 480px){
 
 	body{
-		width: 300px;
+		width: 260px;
 		margin-left: auto;
 		margin-right: auto;
 		background-color: #333;
 		color: #aaa;
+	}
+
+	footer{
+		width: 260px;
+		margin: auto;
+		padding: 2%;
+		color: #777;
+		font-size: 0.6em;
+	}
+
+	#main, #content {
+		width: 260px;
+		margin: auto;
+	}
+
+	h1{
+		font-size: 2em;
+		padding: 0 0 1% 0;
+		color: #6e82b6;
+		width: 240px;
 	}
 
 	h3{
@@ -113,7 +133,7 @@ img:after{
 	}
 
 	article{
-		width: 275px;
+		width: 240px;
 		padding: 2%;
 	}
 
