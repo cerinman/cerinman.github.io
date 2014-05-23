@@ -101,10 +101,11 @@ img:after{
 		padding: 2%;
 		text-decoration: underline;
 		color: #6e82b6;
+		width: 250px;
 	}
 
 	article{
-		width: 300px;
+		width: 275px;
 		padding: 5%;
 	}
 
@@ -112,7 +113,7 @@ img:after{
 		font-family: Verdana;
 		font-size: 0.75em;
 		padding: 2%;
-		width: 260px;	
+		width: 250px;	
 	}
 }
 
