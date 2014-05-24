@@ -133,8 +133,60 @@ a.btn:visited{
 	clear: both;
 }
 
+.wrapper{
+	width: 90%;
+	margin: auto;
+}
+
 .shadow {
 	-webkit-box-shadow: 12px 12px 6px -6px #777;
 	   -moz-box-shadow: 12px 12px 6px -6px #777;
 	        box-shadow: 12px 12px 6px -6px #777;
+}
+
+#darkBlue{
+	background-color: #262F4B;
+	border: 1px solid #000;
+	width: 50px;
+	height: 14px;
+}
+
+#grayBlue{
+	background-color: #495066;
+	border: 1px solid #000;
+	width: 50px;
+	height: 14px;	
+}
+
+#lightBlue{
+	background-color: #46ADCC;
+	border: 1px solid #000;
+	width: 50px;
+	height: 14px;	
+}
+
+#tan{
+	background-color: #C29570;
+	border: 1px solid #000;
+	width: 50px;
+	height: 14px;	
+}
+
+#orange{
+	background-color: #FF663E;
+	border: 1px solid #000;
+	width: 50px;
+	height: 14px;	
+}
+
+#verdana{
+	font-family: Verdana;
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+#bangers{
+	font-family: 'Bangers', cursive;	
+	font-size: 1.25em;
+	font-weight: bold;
 }
