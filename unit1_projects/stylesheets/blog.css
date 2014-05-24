@@ -190,3 +190,38 @@ a.btn:visited{
 	font-size: 1.25em;
 	font-weight: bold;
 }
+
+#container{
+	background-color: #dd5511;
+	padding: 10px;
+}
+
+#static{
+	position: static;
+	padding: 10px;
+	background-color: #11ffff;
+}
+
+#fixed{
+	position: fixed;
+	top: 85px;
+	right: 0;
+	padding: 10px;
+	background-color: #ff11ff;
+	z-index: 100;
+}
+
+#relative{
+	position: relative;
+	padding: 10px;
+	background-color: #ffff11;	
+	top: -27px;
+}
+
+#absolute{
+	position: absolute;
+	top: 1450px;
+	left: 0;
+	padding: 10px;
+	background-color: #777;	
+}

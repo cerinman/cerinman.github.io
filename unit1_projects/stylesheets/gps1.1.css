@@ -1,0 +1,48 @@
+      html{
+        background-color: lightblue;
+      }
+    
+      body{
+        width: 100%;
+        max-width: 1000px;
+        text-align: center;
+      }
+      
+      section{
+        width: 75%;
+        margin: auto;
+        float: left;
+        background-color: gold;
+        border: 1px solid black;
+        padding: 5px;
+        box-sizing: border-box;
+      }
+
+      p{
+        text-align: left;
+      } 
+      
+      aside{
+        width: 20%;
+        float: left;
+        margin-right: 10px;
+      }
+      
+      aside a:link{
+        color:#777;
+      }
+      
+      aside a:visited{
+        color:blue;
+      }
+      
+      aside a:hover{
+        color:gold;
+      }
+      
+      footer{
+        clear: both;
+        padding: 5px;
+        box-sizing: border-box;
+        color:#555;
+      }

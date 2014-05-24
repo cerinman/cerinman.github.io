@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tommy's Blog</title>
+		<link rel=stylesheet href="stylesheets/blog.css">
+	</head>
+	<body>
+		<div id="top">
+			<div id="title">
+				<a href="http://cerinman.github.io">
+					<img src="images/title.png" alt="The Tommy Dugger Blog">				
+				</a>
+			</div>
+		</div>
+		<div id="divider"></div>
+		<div id="content">
+			<div id="post">
+				<h2 class="float-left">CSS Positioing</h2>
+				<div id="date" class="float-left">
+					> May 24th - 2014
+				</div>
+				<div class="clear"></div>
+				<hr>
+				<p>
+					HTML element positiong using CSS is one of the harder subjects to wrap your head around.  And to make things worse, you might get different results depending on the parent element of the element you're trying to position.
+				</p>
+				<p>
+					Positiong troubles can mean the difference between a nice looking site and one that just looks awful.  Lets take a minute and try to de-mystify the CSS position styles.
+				</p>
+				<p>
+					Lets talk about about the 4 positions
+				</p>
+				<h3>
+					Static
+				</h3>
+				<p>
+					The static position is also the default.  If you create and HTML element and provide no CSS position then you have in fact created a static positioned element.
+				</p>
+				<p>
+					Static positioned elements behave exactly as you would expect.  They follow the flow of the page layout.  They also CAN'T be moved using the CSS top, bottom, right, and left properties
+				</p>
+				<p>
+					You can see from the example below how this works.  There are 2 divs, the inner div is postiioned staticly.  The orange of the container div can be seen bordering the staticly positioned inner div.  That is an important note.  The inner div affects the outer div in this case.  The padding of the outer div creates the orange border because if must pad itself based upon the size of the inner div.
+				</p>
+				<div id="container">
+					<div id="static">
+						<p>
+							I'm a static div element inside another div
+						</p>
+					</div>
+				</div>
+				<h3>
+					Fixed
+				</h3>
+				<p>
+					Fixed position elements are fixed based upon the browser window as a whole.  They do not care where in your HTML they were placed.  They fix their selves outside the flow of your document layout.  The remainder of your elements really don't know about the fixed element at that point.
+				</p>
+				<p>
+					Fixed position elements can be placed using the the CSS top, bottom, right, and left properties.  Based upon the CSS z-index property of a fixed element, that element can either be behind or on top of other elements.
+				</p>
+				<p>
+					Fixed position elements are also not affected by scrolling.  They retain their "fixed" position no matter how far you srcoll.
+				</p>
+				<p>
+					You can see the pink fixed element in the top right corner of this page.  It will remain there even as you scroll and even if you shrink your browser's width.
+				</p>
+				<h3>
+					Relative
+				</h3>
+				<p>
+					A relative positioned element is positioned, you guessed it, relative to where it would have been positioned had you never gave it a relative position.  
+				</p>
+				<p>
+					This one is pretty cool.  Just setting it's position as relative doesn't do much at first glance but as you begin to push the element around using the CSS top, bottom, right, and left properties you can see how this one works.  Do you have two images next to each other on your page?  Do you want one to overlap the other?  Simply position on relative and push it over the other.
+				</p>
+				<p>
+					Do keep in mind that you may have to play with the element's z-index to get the right item on top if multiple items are positioned something other than static. 
+				</p>
+				<p>
+					Or example here is covering some gibberish text below!  It's also important to note that our relative positioned element is inside another div just like the static one above is.  Notice how you don't see the orange border?  Keep that mind when playing relative positioned elements.
+				</p>
+				<p>
+					Also, see that gap between the relative element and the next section about Absolute positioning?  Relative positioned items retain the original space that they came from.  This is also another thing you have to look out for when playing with relative positioned elements.
+				</p>
+				<p>
+					blah blah blah blah test test test CSS CSS CSS HTML HTML HTML DBC DBC DBC DBC Tommy Tommy Tommy Tommy fun fun fun blah blah blah
+				</p>
+				<div id="containter">
+					<div id="fixed">
+						<p>
+							I'm a fixed div element
+						</p>
+					</div>
+				</div>
+				<div id="containter">
+					<div id="relative">
+						<p>
+							I'm a relative div element
+						</p>
+					</div>
+				</div>
+				<h3>
+					Absolute
+				</h3>
+				<p>
+					Absolute positioned elements are similar to fixed.  Marking an element's position as absolute removes it from the normal flow of the layout.  Other elementes are un aware of the element at that point.  The space that the element used to reside in is not reserved like a relative positioned element acts.
+				</p>
+				<p>
+					Absolute positioned elements can be placed anywhere on the page using the CSS top, bottom, right, and left properties but here is how they differ from fixed elements.  They are stuck to the page and not the browser window.  If you scroll, the absolute element scrolls with the page.
+				</p>
+				<p>
+					Our example is positioned absolutley to left of this section.  See how it scrolls with the page?
+				</p>
+				<div id="containter">
+					<div id="absolute">
+						<p>
+							I'm an absolute div element
+						</p>
+					</div>
+				</div>	
+				<h3>
+					Conclusion
+				</h3>		
+				<p>
+					In the end, the best way to learn the position properties is to play around with them.  Do like I did, color a div and name it the position.  Play around with the CSS and see what it does.
+				</p>	
+				<p>
+					CSS positioning is very powerful and once you learn it there is no end to what you can build.
+				</p>
+				<p>
+					If you still have questions, I suggest you visit <a href="http://www.w3schools.com/css/css_positioning.asp">The W3 Schools on CSS Positioning</a> to read more and to play with some of their examples!
+				</p>
+				<hr>
+				<div id="postFooter">
+					<a href="http://cerinman.github.io" class="btn">Home</a> | By: Tommy Dugger
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
