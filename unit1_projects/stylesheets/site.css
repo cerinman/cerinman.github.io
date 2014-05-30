@@ -68,10 +68,18 @@ section{
 	z-index: 10;
 }
 
-ul{
+#article ul{
 	font-size: .9em;
 	padding: 10px;
 	margin-left: 20px;
+}
+
+#article p img{
+	width: 100%;
+	border: 3px solid #222;
+	-webkit-box-shadow: 12px 12px 6px -6px #777;
+	   -moz-box-shadow: 12px 12px 6px -6px #777;
+	        box-shadow: 12px 12px 6px -6px #777;
 }
 
 #text{
