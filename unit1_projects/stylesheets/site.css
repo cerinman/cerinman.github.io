@@ -68,6 +68,11 @@ section{
 	z-index: 10;
 }
 
+ul{
+	font-size: .9em;
+	padding: 10px;
+}
+
 #text{
 	width: 98%;
 	margin: auto;
