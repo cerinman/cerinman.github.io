@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" href="../unit1_projects/practice/stylesheets/reset.css">
+	<link rel="stylesheet" href="../unit1_projects/stylesheets/site.css">
+	<link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<title>Week 4 Technical Blog - Ruby Loops</title>
+</head>
+<body>
+	<div id="main">
+		<header>
+			<div id="logo">
+				<a href="http://cerinman.github.io">
+					<img src="../unit1_projects/images/logo.png" alt="Tommy Dugger">
+				</a>
+			</div>
+			<div id="clock">
+				
+			</div>
+			<nav>
+				<div id="nav">
+					<a href="Http://cerinman.github.io">Home</a>
+					<a href="../unit1.html">Unit 1</a>
+					<a href="../unit2.html">Unit 2</a>
+					<a href="../unit3.html">Unit 3</a>
+					<a href="../resources.html">Resources</a>					
+				</div>
+			</nav>
+		</header>
+		<section id="content">
+			<div id="article">
+				<h2>Week 4 Technical Blog - Ruby Loops</h2>
+				<div id="text">
+					<p>
+						<img src="../unit1_projects/images/frootloops1.jpg" alt="Loops">
+					</p>
+					<p>
+						Ruby must take the crown for number of ways to loop.  The Ruby landscape it ripe with
+						a million ways to iterate over stuff.  I imagine in my mind, a mom with a bag of froot
+						loops, driving her minivan trying to hand the bag back to her two year old son in the
+						back seat.  "I only want red!", he yells at her as froot loops fall over the floor, in 
+						his seat, and on mom's lap.  The blue and green loops will soon be crushed under foot
+						by the family, the purples ones lost to the void that is the cracks of the car seats, 
+						the yellows ones rolled to the abyss under the car seats.
+					</p>
+					<p>
+						Ruby loops, much like froot loops, are many colors.  I see myself, like the son, stuck
+						on the red loops(each) with the occasional blue(while) or green(for) loop thrown
+						in when my precious red loops just don't cut it.  And don't get me started on the 
+						yellow(until) ones, who could ever want to use that?!
+					</p>
+					<p>
+						While the each method is a powerful tool and a great go to looping method, I can't help
+						but wonder what else I'm missing out on.  In today's blog we'll explore some Ruby loops
+						and when to use them.
+					</p>
+					<h2>Loop/While/Until</h2>
+					<p>
+						We'll start with the simplest of loops.  The loop.  It doesn't get much more simple than
+						this for loops.  The syntax looks something like this.
+					</p>
+					<p>
+						<img src="../unit1_projects/images/loop.png" alt="loop">
+					</p>
+					<p>
+						The basic loop is great for looping when you don't know exactly when you need to stop
+						looping.  The condition to break out of the loop can be just about anything that 
+						evaluates to true or false.
+					</p>
+					<p>
+						The while loop is pretty much the same as the loop.  In fact, you can interchange the
+						two with minimum effort.  In the while loop we check our condition after the while
+						declaration.  You can still use break in the block but it's not required.  Here is
+						what the while syntax looks like.
+					</p>
+					<p>
+						<img src="../unit1_projects/images/while.png" alt="while">
+					</p>
+					<p>
+						The while loop, like loop, is great for looping when you are not sure when you will 
+						need to exit or break the loop.  A great example would be a terminal program where
+						you wait for a users input before performing a task.  You could repeatedly ask the 
+						user for input until they give an exit command.
+					</p>
+					<p>
+						Until follows the same syntax as while but test the reverse condition.  So instead of
+						saying while something is true, we say until something is true.  Here is what that
+						looks like.
+					</p>
+					<p>
+						<img src="../unit1_projects/images/until.png" alt="until">
+					</p>
+					<p>
+						A word of warning! Loop, while, and until are easy to turn into infinite loops if you are not
+						careful and we all now that can crash things in a hurry.
+					</p>
+					<p>
+						It's also important to point out that you can use while and until loops as modifiers at the 
+						end of a statement much like what you can do with an if statement.  This has an added
+						bonus of shortening code to a single line and can often makes things a bit easier to read.
+						Here is what that looks like!
+					</p>
+					<p>
+						<img src="../unit1_projects/images/whileuntil.png" alt="While Until">
+					</p>
+					<h2>The For Loop</h2>
+					<p>
+						The for loop is the next stop on our tour of Ruby Loops.  The for loop is our introduction
+						to a more structured way of looping.  The for loop is great when you know exactly the number
+						of times you need to loop or iterate over something. You can also use ranges in for loops. 
+						Here is what that looks like.
+					</p>
+					<p>
+						<img src="../unit1_projects/images/for.png" alt="for">
+					</p>
+					<h2>Each</h2>
+					<p>
+						Each is our next stop.  Each is a method that is built on top of the for loop construct.  Each
+						is available on types such as Array and Hash.  Each is used heavily.  I would almost be willing
+						to bet that it is used more often than any other looping technique as it provides a convenient
+						way to manipulate or pull data from the object your iterating over.  Each is a go to loop.  Here
+						is what that looks like.
+					</p>
+					<p>
+						<img src="../unit1_projects/images/each.png" alt="each">
+					</p>
+					<p>
+						Each can also be used on ranges and provides a great way to quickly do some neat stuff
+					</p>
+					<p>
+						<img src="../unit1_projects/images/eachrange.png" alt="each range">
+					</p>
+					<h2>Times</h2>
+					<p>
+						The times method provides a quick way of doing a for loop based upon an number.  A good example
+						where this could be useful is on repetitive tasks where you don't want to have to repeat yourself.
+						Need to get a random number 3 times in a row?  Why not use times to save yourself some time.  Here
+						is what that looks like. 
+					</p>
+					<p>
+						<img src="../unit1_projects/images/times.png" alt="times">
+					</p>
+					<h2>Conclusion</h2>
+					<p>
+						There are so many ways to loop and iterate over data in Ruby that I don't have the time to cover 
+						every last loop and method that uses some kind of loop.  I would strongly suggest you do some
+						research and experiment with different types of loops.  I've listed some resources below for
+						further study.
+					</p>
+					<p>
+						Thanks for stopping by and reading.
+					</p>
+					<h2>Resources</h2>
+					<p>
+						<ul>
+							<li>
+								<a href="http://www.skorks.com/2009/09/a-wealth-of-ruby-loops-and-iterators/">A Wealth of Ruby Loops</a>
+							</li>
+							<li>
+								<a href="http://www.tutorialspoint.com/ruby/ruby_loops.htm">Tutorials Point - Ruby Loops</a>
+							</li>
+							<li>
+								<a href="http://ruby.bastardsbook.com/chapters/loops/">The Bastard Book of Ruby - Loops</a>
+							</li>
+							<li>
+								<a href="http://www.codecademy.com/courses/ruby-beginner-en-XYcN1/2/1">Codecademy Loops</a>
+							</li>
+						</ul>
+					</p>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div id="footerLeft">
+				Tommy Dugger 2014 DBC
+			</div>
+			<div id="footerLinks">
+				<a href="mailto:tommy.dugger78@gmail.com"><span class="fa fa-envelope"></span></a>
+				<a href="http://www.github.com/cerinman"><span class="fa fa-github"></span></a>
+				<a href="http://www.twitter.com/tommy_dugger"><span class="fa fa-twitter"></span></a>		
+			</div>
+		</footer>
+		<div id="mountain">
+			<img src="../unit1_projects/images/mountains.png" alt="Mountains">
+		</div>
+	</div>
+</body>
+</html>
+<script language="javascript" type="text/javascript" src="../scripts/time.js"></script>
