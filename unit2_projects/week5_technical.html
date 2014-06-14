@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" href="../unit1_projects/practice/stylesheets/reset.css">
+	<link rel="stylesheet" href="../unit1_projects/stylesheets/site.css">
+	<link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<title>Week 5 Technical Blog - Ruby Classes</title>
+</head>
+<body>
+	<div id="main">
+		<header>
+			<div id="logo">
+				<a href="http://cerinman.github.io">
+					<img src="../unit1_projects/images/logo.png" alt="Tommy Dugger">
+				</a>
+			</div>
+			<div id="clock">
+				
+			</div>
+			<nav>
+				<div id="nav">
+					<a href="Http://cerinman.github.io">Home</a>
+					<a href="../unit1.html">Unit 1</a>
+					<a href="../unit2.html">Unit 2</a>
+					<a href="../unit3.html">Unit 3</a>
+					<a href="../resources.html">Resources</a>					
+				</div>
+			</nav>
+		</header>
+		<section id="content">
+			<div id="article">
+				<h2>Week 5 Technical Blog - Ruby Classes</h2>
+				<div id="text">
+					<p>
+						<img src="../unit1_projects/images/data_classes.png" alt="Loops">
+					</p>
+					<p>
+						Everything is an object in Ruby.  All the way down to numbers and strings.  And that is a
+						great way to look at it too because everything inherits from object.  Object is the root
+						Ruby class that everything is built on.
+					</p>
+					<p>
+						For that is what an object is, a Ruby class.  A class describes what an object is, what it
+						can do, how it works.  This fundamental construct is the basis of all object oriented programming
+						languages.  It is this ability to define classes or objects that gives the ability to model
+						real world objects and ideas.  It is also the power and grace behind object oriented programming.
+					</p>
+					<h2>Inheritance</h2>
+					<p>
+						Inheritance goes hand in hand with Ruby classes/objects.  It is this concept that allows objects
+						to have relationships.  Golden Retrievers and Poodles are both dogs so wee could say that 
+						Golden Retrievers and Poodles inherit from dog.  All dogs have similar traits and abilities.
+						They bark, they dig holes, they wag their tails.  These common abilities and traits are abstracted
+						away to a dog class.
+					</p>
+					<p>
+						We could then have a class for Golden Retriever that inherits the traits and abilities from dog.
+						We could then create as many unique Golden Retrievers as we wished and they would all be able to
+						bark, dig holes, and wag their tails.
+					</p>
+					<h2>The Dog Class</h2>
+					<p>
+						Using this new knowledge, let's build our first dog class and give it some abilities.  We'll give
+						our dog a name and the ability to bark, wag his tail, and dig a hole.  We'll also store his name
+						in an instance variable so that it can be retrieved and set at will.  This variable will only be
+						available to an instance of our Dog class rather than the class itself.  We denote this by placing
+						an @ symbol in front of the name of the variable.
+					</p>
+					<p>
+						We'll also use the attr_accessor to auto create methods to set and retrieve the @name variable on
+						and instance of our Dog class.  Rather than creating a method to return the name and a method to
+						set the name, we use this as a short cut.  You can also use attr_reader to only create the method
+						to retrieve or just the attr_writer to only create the method to set.
+					</p>
+					<p>
+						<img src="../unit1_projects/images/dogclass.png" alt="Dog Class">
+					</p>
+					<p>
+						
+					</p>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div id="footerLeft">
+				Tommy Dugger 2014 DBC
+			</div>
+			<div id="footerLinks">
+				<a href="mailto:tommy.dugger78@gmail.com"><span class="fa fa-envelope"></span></a>
+				<a href="http://www.github.com/cerinman"><span class="fa fa-github"></span></a>
+				<a href="http://www.twitter.com/tommy_dugger"><span class="fa fa-twitter"></span></a>		
+			</div>
+		</footer>
+		<div id="mountain">
+			<img src="../unit1_projects/images/mountains.png" alt="Mountains">
+		</div>
+	</div>
+</body>
+</html>
+<script language="javascript" type="text/javascript" src="../scripts/time.js"></script>
