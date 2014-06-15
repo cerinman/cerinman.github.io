@@ -46,38 +46,263 @@
 						languages.  It is this ability to define classes or objects that gives the ability to model
 						real world objects and ideas.  It is also the power and grace behind object oriented programming.
 					</p>
+					<p>
+						The idea of a class is that you use it to stamp out objects.  Think of classes as a mold and an
+						object as the thing created by the mold.  For instance, you can create a car class and then
+						create multiple car objects that are all unique based upon their characteristics like paint
+						color, engine size, and passenger capacity.
+					</p>
+					<p>
+						We can take this concept even farther by creating a new class for a truck and say that it inherits
+						from car the characteristics paint color, engine size, and passenger capacity.  We can then just
+						worry about giving truck the characteristics that make it a truck like bed size, towing capacity,
+						etc...
+					</p>
+					<p>
+						Classes are created in Ruby using the class keyword followed by a name for the class.  We then 
+						supply the end keyword to denote the end of the class block.  It is also common practice in Ruby
+						to always name you classes starting with a capital letter.  Here is an example of what that looks
+						like.
+					</p>
+					<p>
+						<img src="../unit1_projects/images/rubyclass.png" alt="Class">
+					</p>
+					<h2>Class Variables vs Instance Variables</h2>
+					<p>
+						When Creating classes in Ruby, we need to be able to define characteristics.  We do this through
+						variables just as we would outside a Ruby class but there are notable differences.  When we declare
+						a variable in Ruby we have to be aware of the scope the variable was declared in.
+					</p>
+					<p>
+						When we stamp a new object out using a class we have to think about who owns the characteristics, the
+						class?  Or the stamped out object?  We use the terms class variable and instance variable to denote
+						the difference.  A class variable belongs to the class or the mold while an instance variable belongs
+						to the object created by the class.  In this way we make sure that each object derived from a class
+						can have it's own unique characteristics but at the same time can have access to variables meant to be
+						shared across instances.
+					</p>
+					<h2>Class Variables</h2>
+					<p>
+						First lets talk about class variables.  We declare a class variable with double @ symbols like this.
+					</p>
+					<p>
+						<img src="../unit1_projects/images/classvariable.png" alt="class variable">
+					</p>
+					<p>
+						This variable would be available across all instances of a class.  A good example of a use case for 
+						a class variable would be a constant that all instances of a class would need.  Using our car 
+						analogy, perhaps there is a multiplier needed to figure out torque that is the same for all makes
+						and models of a car.  We could then use a class variable to store this information for use across
+						all instances of our car class.
+					</p>
+					<h2>Instance Variables</h2>
+					<p>
+						Next we need to talk about instance variables.  We declare a instance variable with a single @ symbol
+						like this.
+					</p>
+					<p>
+						<img src="../unit1_projects/images/instancevariable.png" alt="instance variables">
+					</p>
+					<p>
+						Instance variables hold data specific to the instance of a class.  The variable name would be the same
+						for all instances of a class but the data inside would be unique to the instance.  A great example here
+						using our car analogy would be the make and model of the car being created.  All cars have a make and
+						model but that make and model would most likely be different for each car we created.
+					</p>
+					<p>
+						It is also important to remember that instance variables are more often than not set at the time a
+						new object is created.  The data is passed in as arguments to the initialize method of a class and
+						then assigned to the instance variables as shown below.
+					</p>
+					<p>
+						<img src="../unit1_projects/images/initialize.png" alt="initialize method">
+					</p>
+					<p>
+						The initialize method is run when a new object is created.  By defining this method in out class
+						we can set the values of our instance variables by taking in data from the user.
+					</p>
+					<h2>Getter and Setter Methods</h2>
+					<p>
+						So now that we know a little more about class variables, we need to talk about how to access them.
+						Both class and instance variables are available to your code within your class but what if we want
+						to make variables available outside the class or object?  Enter Getter and Setter Methods.
+					</p>
+					<p>
+						By declaring a method to get and set the value of a variable, we make that data available outside
+						the class or object by using the dot notation.  Here is an example of a getter and setter method
+						for the make instance variable of a car class as well as it's use.
+					</p>
+					<p>
+						<img src="../unit1_projects/images/instancegettersetter.png" alt="instnace variable getter setter">
+					</p>
+					<p>
+						And here is an example of a getter and setter method for a class variable torque modifier for a
+						car class and it's use.
+					</p>
+					<p>
+						<img src="../unit1_projects/images/classgettersetter.png" alt="class variable getter setter">
+					</p>
+					<p>
+						Giving access to certain variables outside the class gives flexibility to the user.  Using our
+						car analogy, what if the user changes the type of tire that is on his/her car?  By giving them
+						access to car.tire, they can now update their car with ease.
+					</p>
+					<h2>Attribute Reader, Writer, and Accessor</h2>
+					<p>
+					    Writing all these methods for a class sounds tedious!  No body has time for that?  I can already
+						hear you saying it.  I said it my self.  This seems a bit much just to be able to set and retrieve
+						variable data.  Is there not an easier way?
+					</p>
+					<p>
+						Why yes there is and I'm glad you asked.  Ruby has provided the following in order to save us poor
+						programmers the time of having to write our getter and setter methods.  The methods are created
+						automatically in the background at the time of compilation.
+					</p>
+					<p>
+						<img src="../unit1_projects/images/attribute.png" alt="Attributes">
+					</p>
+					<p>
+						The attr_accessor creates both the getter and setter method for a variable.  
+					</p>
+					<p>
+						The attr_reader creates only the getter method for a variable.
+					</p>
+					<p>
+						The attr_writer creates only the setter method for a variable.
+					</p>
+					<h2>Class Methods vs Instance Methods</h2>
+					<p>
+						Now that we've covered variables at length, lets dive into methods.  No doubt you have already 
+						created methods in your introduction to Ruby and you have some understanding of them.  We won't
+						got into detail here about what a method is but we will cover the difference between the two
+						types of methods that you can have in your classes/objects.  Surprisingly enough, they have to 
+						do with scope just like our variables did.
+					</p>
+					<h2>Class Methods</h2>
+					<p>
+						Much like class variables, class methods are available at the class or mold level.  Creating
+						an new object from a class and then trying to call a class method on that instance would result
+						in a no method defined error.  You could how ever call that class method off the class itself.
+					</p>
+					<p>
+						To declare a class method we use the self keyword followed by a dot and then our method name.
+						Here is an example of how that looks as well as how it is used.
+					</p>
+					<p>
+						<img src="../unit1_projects/images/classmethod.png" alt="class method">
+					</p>
+					<h2>Instance Methods</h2>
+					<p>
+						By now, you have most likely already guessed that instance methods are much like instance variables
+						in that they are available to the instance of an object created from our class.  Good guess!
+					</p>
+					<p>
+						Instance methods are declared just like any other method.  We use the def keyword followed by
+						a method name and then the end keyword.  We then do something within the method and return
+						some value.  Here is what that looks like as well as how it is used.  
+					</p>
+					<p>
+						<img src="../unit1_projects/images/instancemethod.png" alt="instance methods">
+					</p>
 					<h2>Inheritance</h2>
 					<p>
 						Inheritance goes hand in hand with Ruby classes/objects.  It is this concept that allows objects
-						to have relationships.  Golden Retrievers and Poodles are both dogs so wee could say that 
-						Golden Retrievers and Poodles inherit from dog.  All dogs have similar traits and abilities.
-						They bark, they dig holes, they wag their tails.  These common abilities and traits are abstracted
-						away to a dog class.
+						to have relationships.  Cars and trucks are both vehicles so we can say that they inherit from
+						vehicle.  Because all vehicles have common characteristics like turn, stop, etc.. then we can abstract those common items away into a vehicle class.
 					</p>
 					<p>
-						We could then have a class for Golden Retriever that inherits the traits and abilities from dog.
-						We could then create as many unique Golden Retrievers as we wished and they would all be able to
-						bark, dig holes, and wag their tails.
+						We could then have a class for car that inherits the traits and abilities from vehicle.
+						We could then create as many unique cars as we wished and they would all be able to
+						turn and stop.
+					</p>
+					<p>
+						We can create an inheritance between classes by using the less than operator followed by the 
+						name of the class we wish to inherit from.  Here is an example of how that looks.
+					</p>
+					<p>
+						<img src="../unit1_projects/images/inheritance.png" alt="inheritance">
+					</p>
+					<h2>Lets Build Some Classes!</h2>
+					<p>
+						Now that we have some fundamental knowledge of what classes are and how they work lets build something
+						to see everything work together.  
+					</p>
+					<p>
+						For this example I've decided to model a golden retriever.  To start, we'll build an animal class since
+						at its root, a golden retriever is an animal.
+					</p>
+					<h2>The Animal Class</h2>
+					<p>
+						To begin, lets decide how we wish to describe an animal.  For our example, I've decided that the
+						below items need to be a part of our animal class.
+					</p>
+					<p>
+						<ul>
+							<li>Name</li>
+							<li>Age</li>
+							<li>Genus</li>
+							<li>Can Eat</li>
+							<li>Can Sleep</li>
+						</ul>
+					</p>
+					<p>
+						Now that we now what an animal is all about, lets build the class for it.
+					</p>
+					<p>
+						<img src="../unit1_projects/images/animalclass.png" alt="Animal Class">
 					</p>
 					<h2>The Dog Class</h2>
 					<p>
-						Using this new knowledge, let's build our first dog class and give it some abilities.  We'll give
-						our dog a name and the ability to bark, wag his tail, and dig a hole.  We'll also store his name
-						in an instance variable so that it can be retrieved and set at will.  This variable will only be
-						available to an instance of our Dog class rather than the class itself.  We denote this by placing
-						an @ symbol in front of the name of the variable.
+						Now that we have an animal class, let's build our first dog class and give it some abilities.  We'll give
+						our dog the following characteristics and then inherit the rest from animal.
 					</p>
 					<p>
-						We'll also use the attr_accessor to auto create methods to set and retrieve the @name variable on
-						and instance of our Dog class.  Rather than creating a method to return the name and a method to
-						set the name, we use this as a short cut.  You can also use attr_reader to only create the method
-						to retrieve or just the attr_writer to only create the method to set.
+						<ul>
+							<li>Can Bark</li>
+							<li>Can Dig</li>
+							<li>Can Fetch</li>
+						</ul>
 					</p>
 					<p>
 						<img src="../unit1_projects/images/dogclass.png" alt="Dog Class">
 					</p>
+					<h2>How it all works together!</h2>
 					<p>
-						
+						Now lets see how we can create a new dog and use the abilities and attributes form the animal class
+						as well as the dog class.
+					</p>
+					<p>
+						<img src="../unit1_projects/images/usage.png" alt="Usage">
+					</p>
+					<h2>Conclusion</h2>
+					<p>
+						Object Oriented Programming is the corner stone of today's programming languages.  Understanding
+						these concepts is key to building software that can mimic the world we live in.  It's also the key
+						to building large and complex software that still remains manageable.  The ability to abstract away
+						characteristics of something to a class allows for flexibility and robust design.
+					</p>
+					<p>
+						I've linked some further resources below in hopes that you will take the time to dig a little deeper
+						into Ruby classes.  There is so much more that I did not touch here in the post and the sky is the 
+						limit as to what you can model and do with classes.  Take the time to read through these resources
+						and shore up your understanding of this important concept.  Thanks for reading!
+					</p>
+					<h2>Resources</h2>
+					<p>
+						<ul>
+							<li>
+								<a href="http://www.ruby-doc.org/core-2.1.2/Class.html">Ruby Docs - Class</a>
+							</li>
+							<li>
+								<a href="http://rubymonk.com/learning/books/4-ruby-primer-ascent/chapters/45-more-classes/lessons/113-class-variables">Ruby Monk - Class Variables and Methods</a>
+							</li>
+							<li>
+								<a href="http://www.railstips.org/blog/archives/2006/11/18/class-and-instance-variables-in-ruby/">Rails Tips - Class and Instance Variables</a>
+							</li>
+							<li>
+								<a href="http://www.railstips.org/blog/archives/2009/05/11/class-and-instance-methods-in-ruby/">Rails Tips - Class and Instance Methods</a>
+							</li>
+						</ul>
 					</p>
 				</div>
 			</div>
