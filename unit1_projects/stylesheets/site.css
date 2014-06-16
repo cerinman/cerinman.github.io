@@ -64,6 +64,7 @@ section{
 
 #article p{
 	font-family: 'Ubuntu', sans-serif;
+	line-height: 150%;
 	width: 98%;
 	padding: 10px;
 	margin: auto;
