@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" href="../unit1_projects/practice/stylesheets/reset.css">
+	<link rel="stylesheet" href="../unit1_projects/stylesheets/site.css">
+	<link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<title>Week 6 Technical Blog - Ruby Classes & Modules</title>
+</head>
+<body>
+	<div id="main">
+		<header>
+			<div id="logo">
+				<a href="http://cerinman.github.io">
+					<img src="../unit1_projects/images/logo.png" alt="Tommy Dugger">
+				</a>
+			</div>
+			<div id="clock">
+				
+			</div>
+			<nav>
+				<div id="nav">
+					<a href="Http://cerinman.github.io">Home</a>
+					<a href="../unit1.html">Unit 1</a>
+					<a href="../unit2.html">Unit 2</a>
+					<a href="../unit3.html">Unit 3</a>
+					<a href="../resources.html">Resources</a>					
+				</div>
+			</nav>
+		</header>
+		<section id="content">
+			<div id="article">
+				<h2>Week 6 Technical Blog - Ruby Classes & Modules</h2>
+				<div id="text">
+					<p>
+						<img src="../unit1_projects/images/classmodule.jpg" alt="Classes vs Modules">
+					</p>
+					<p>
+						For this weeks technical blog post I've decided to go over the difference between
+						Ruby classes and modules.  There is much confusion between the difference and when
+						to use one or the other.  I hope by the time you are done reading, you will have a
+						better understanding of the two and when to use them.  If you haven't already, take
+						a second to review the first image above this paragraph and then lets start with the
+						Ruby class.
+					</p>
+					<h2>Ruby Class</h2>
+					<p>
+						Classes are blue prints.  They describe how to build an object.  They lay out objects
+						characteristics(Variables) as well as abilities(Methods).  This set of blue prints
+						is used to instantiate an object(build and object).  Classes are created using the
+						class keyword.  You can read more about classes by reading <a href="week5_technical.html">my previous technical blog
+						post from last week.</a> 
+					</p>
+					<p>
+						Classes are the building blocks of Object Oriented Programming.  They allow us to model
+						real world things and ideas as well as providing a way of organizing our code.  Everything
+						in Ruby is an object created from a class.  Arrays are objects created from the array class.
+						Strings are objects created from the string class.
+					</p>
+					<p>
+						To use these classes we create or instantiate them.  We say, for example, my_array = Array.new or
+						we say my_array = [].  Both are creating a new Array object that holds state for that copy.
+					</p>
+					<p>
+						Classes can also inherit from one another.  For example, the Array and String classes derive from the
+						base class object.  They inherit characteristics from object much the way a child would inherit traits
+						from it's parents.  This give flexibility to how we model objects in Ruby but there are limitations as
+						well.  For instance, you can only inherit from one other class.  This can be limiting and while other
+						programming languages let you inherit form multiple classes or even to create interfaces, Ruby does 
+						not.  This is where modules come in.
+					</p>
+					<h2>Ruby Modules</h2>
+					<p>
+						Modules are very much like classes and they even resemble them in code layout.  They can have 
+						methods.  Those methods can be instance or module much like class methods can be instance or class.  
+						However, the main difference is that modules are declared using the module keyword and CANNOT be instantiated.
+						Modules can also have constants
+					</p>
+					<p>
+						Modules can be included in other classes.  When included, the modules methods and variables are then 
+						made available to that class. They are now "Mixed In" with the class.  Because of this, Modules allow 
+						us a great way to extend functionality of a class.  It is also important to remember that when including
+						a module in a class, only instance methods for the module would be available to the class much the way
+						that class methods are not available to an instantiated object of a class.
+					</p>
+					<p>
+						Modules are also a great way to package your code.  They can be used to group together methods, classes
+						and constants that can then be used via the require keyword.  Using modules this way provide a name space
+						and remove the worry of naming conflicts.  If we require a module in Ruby and that module has a variable
+						or method name that is the same as a variable or method in our current code we do not have to worry about
+						the ambiguity errors as we can call the module method through the modules name
+					</p>
+					<h2>Conclusion</h2>
+					<p>
+						Modules are a very powerful way to extend the functionality of classes when inheritance isn't enough.  They
+						also provide a great way to package code into name spaces.  Classes are the building blocks of Ruby's 
+						Object Oriented roots and allow for modeling of real world things and ideas.  Classes and be instantiated
+						while modules can not.  For more details, please read more about Classes and Modules below.
+					</p>
+					<h2>Resource</h2>
+					<p>
+						<ul>
+							<li>
+								<a href="http://www.tutorialspoint.com/ruby/ruby_modules.htm">Tutorials Point - Ruby Modules</a>
+							</li>
+							<li>
+								<a href="http://ruby-doc.org/core-2.0.0/Module.html">Ruby Docs - Modules</a>
+							</li>
+							<li>
+								<a href="http://stackoverflow.com/questions/151505/difference-between-a-class-and-a-module">Stack Overflow - Difference Between a class and a module</a>
+							</li>
+							<li>
+								<a href="http://www.tutorialspoint.com/ruby/ruby_classes.htm">Tutorials Point - Ruby Classes</a>
+							</li>
+							<li>
+								<a href="http://www.ruby-doc.org/core-2.1.2/Class.html">Ruby Docs - Classes</a>
+							</li>
+						</ul>
+					</p>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div id="footerLeft">
+				Tommy Dugger 2014 DBC
+			</div>
+			<div id="footerLinks">
+				<a href="mailto:tommy.dugger78@gmail.com"><span class="fa fa-envelope"></span></a>
+				<a href="http://www.github.com/cerinman"><span class="fa fa-github"></span></a>
+				<a href="http://www.twitter.com/tommy_dugger"><span class="fa fa-twitter"></span></a>		
+			</div>
+		</footer>
+		<div id="mountain">
+			<img src="../unit1_projects/images/mountains.png" alt="Mountains">
+		</div>
+	</div>
+</body>
+</html>
+<script language="javascript" type="text/javascript" src="../scripts/time.js"></script>
