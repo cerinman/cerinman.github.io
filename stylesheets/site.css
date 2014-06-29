@@ -68,7 +68,7 @@ section{
 	width: 98%;
 	padding: 10px;
 	margin: auto;
-	font-size: 1em;
+	font-size: 1.25em;
 	z-index: 10;
 }
 
@@ -209,7 +209,7 @@ nav{
 
 nav a{
 	font-family: 'Bangers', cursive;
-	font-size: 1.2em;
+	font-size: 1.25em;
 	padding: 5% 5% 0 0;
 	text-decoration: none;
 }

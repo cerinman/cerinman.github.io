@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="../stylesheets/reset.css">
+  <link rel="stylesheet" href="../stylesheets/site.css">
+  <link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <title>Week 7 Technical Blog - SQL vs. NoSQL</title>
+</head>
+<body>
+  <div id="main">
+    <header>
+      <div id="logo">
+        <a href="http://cerinman.github.io">
+          <img src="../images/logo.png" alt="Tommy Dugger">
+        </a>
+      </div>
+      <div id="clock">
+        
+      </div>
+      <nav>
+        <div id="nav">
+          <a href="Http://cerinman.github.io">Home</a>
+          <a href="../unit1.html">Unit 1</a>
+          <a href="../unit2.html">Unit 2</a>
+          <a href="../unit3.html">Unit 3</a>
+          <a href="../resources.html">Resources</a>         
+        </div>
+      </nav>
+    </header>
+    <section id="content">
+      <div id="article">
+        <h2>Week 7 Technical Blog - SQL vs. NoSQL</h2>
+        <div id="text">
+          <p>
+            <img src="../images/nosqlfunny.png" alt="NoSQL Funny">
+          </p>
+          <h2>SQL or Relational Database Management Systems</h2>
+          <p>
+            Structured and Relational, SQL databases group their data together into logical tables.
+            A person has a name, age, weight, height, hair color, etc. so in SQL we structure a 
+            person as a table in the database where there are columns for each characteristic of
+            that person.  You can then have a new person for each row in the person table.
+          </p>
+          <p>
+            SQL databases also rely heavily on having identity columns in a table so that each row
+            in a table becomes unique.  This also has the added advantage of being able to relate
+            data in one table to data in another.
+          </p>
+          <p>
+            SQL databases rely on the SQL language(Structured Query Language) to query their data.
+            This language is standard across almost all SQL type database software.  This gives
+            SQL databases a leg up as there is less of a learning curve when dealing with vendor
+            specific software.
+          </p>
+          <p>
+            SQL queries can be very complex and allow a flexible way of grouping data together for
+            consumption.  This is something that NoSQL is not very good at.
+          </p>
+          <p>
+            SQL Databases Focus on the acronym ACID to ensure their data is valid.  here is a break
+            down of that acronym.
+            <ul>
+              <li>
+                Atomicity - Each transaction is atomic.  If one part fails, the entire transaction fails.
+              </li>
+              <li>
+                Consistency - Every transaction is subject to a consistent set of rules.
+              </li>
+              <li>
+                Isolation - No transaction should interfere with another transaction.
+              </li>
+              <li>
+                Durability - Once a transaction is committed, it remains committed.
+              </li>
+            </ul>
+          </p>
+          <p>
+            Because of ACID, SQL databases are very consistent and their data can be trusted to be valid.
+          </p>
+          <h2>NoSQL</h2>
+          <p>
+            NoSQL stands for Not Only SQL and has no structure or schema.  It is basically a large serialized object store.  Comparisons can
+            be made between it and json in JavaScript.  There is a key and their is a value that is most often
+            an object or document.
+          </p>
+          <p>
+            Because of this, NoSQL databases do not support complex queries.  There is no joins, there is no grouping.
+            If you wish to have this type of functionality with NoSQL then you must handle it in your own code.
+          </p>
+          <p>
+            NoSQL also has no standard query language like SQL.  Each vendor of NoSQL like databases have their own
+            proprietary approach to querying their data.  This adds a learning curve to using NoSQl databases.
+          </p>
+          <p>
+            NoSQL does not use ACID and as such has none of the overhead pertaining to it.  NoSQL, instead, User 
+            BASE which is the opposite of ACID and is broken down below.
+            <ul>
+              <li>
+                Basically available - guaranteed availability.
+              </li>
+              <li>
+                Soft-state - The state of the system may change, even without a query.
+              </li>
+              <li>
+                Eventually Consistent - The system will become consistent over time.
+              </li>
+            </ul>
+          </p>
+          <p>
+            NoSQL scales horizontally(multiple servers) with ease.  NoSQL databases can be hosted on multiple servers
+            and any server can answer any query.  Any write query can write to any database regardless of server and 
+            have that data propagate to the other servers.  Servers communicate amongst themselves at their own pace.  
+            Because of this a server that answers a query may not have the latest data.  
+          </p>
+          <p>
+            It is this paradigm that makes
+            NoSQL data less than consistent and not always right but it is also why NoSQL databases have high availability.
+            If one server goes down, the other servers are still available to handle queries.
+          </p>
+          <p>
+            There are 4 main types of NoSQL databases and they are:
+            <ul>
+              <li>
+                Column Store
+                <ul>
+                  <li>
+                    Column data is saved together as opposed to row data
+                  </li>
+                  <li>
+                    Examples - Hadoop, Cassandra, Hypertable
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Key-Value Store
+                <ul>
+                  <li>
+                    A key that refers to a payload
+                  </li>
+                  <li>
+                    Examples - Memcache, Azure Table Storage, Redis
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Document/XML/Object Store
+                <ul>
+                  <li>
+                    Key(and possibly other indexes) point to a serialized object
+                  </li>
+                  <li>
+                    Examples - MongoDB, CouchDB, RavenDB
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Graph Store
+                <ul>
+                  <li>
+                    Nodes are stored independently and relationship between nodes(edges) are stored with data
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </p>
+          <h2>Conclusion</h2>
+          <p>
+            SQL or relational database management systems are great when your data has to be structured and valid.  The ACID model
+            for these types of database systems work well for data from business such as banking, finance, and safety systems.  SQL
+            databases are also great for complex queries.  They scale vertically easily through hardware but poorly horizontally through
+            multiple servers.
+          </p>
+          <p>
+            NoSQL databases are great for having high availability for data as they scale both horizontally and vertically.  This also
+            has a great benefit of increasing access speeds to data.  With out the ACID model, data is not guaranteed to be valid.
+            Querying one server may result in data that is not the most recent.  If speed and availability is key then NoSQL may be your
+            answer.
+          </p>
+          <h2>Resource</h2>
+          <p>
+            <ul>
+              <li>
+                <a href="https://www.digitalocean.com/community/tutorials/understanding-sql-and-nosql-databases-and-different-database-models">Understanding SQL And NoSQL Databases</a>
+              </li>
+              <li>
+                <a href="http://dba.stackexchange.com/questions/5/what-are-the-differences-between-nosql-and-a-traditional-rdbms">StackExchange - What are the Differences between NoSQL and a traditional Relational Database Management System</a>
+              </li>
+              <li>
+                <a href="http://www.slideshare.net/RTigger/sql-vs-no-sql">Slideshare - Sql vs NoSQL</a>
+              </li>
+              <li>
+                <a href="http://en.wikipedia.org/wiki/SQL">Wikipedia - SQL</a>
+              </li>
+              <li>
+                <a href="http://en.wikipedia.org/wiki/NoSQL">Wikipedia - NoSQL</a>
+              </li>
+              <li>
+                <a href="http://nosql-database.org">nosql-database.org</a>
+              </li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div id="footerLeft">
+        Tommy Dugger 2014 DBC
+      </div>
+      <div id="footerLinks">
+        <a href="mailto:tommy.dugger78@gmail.com"><span class="fa fa-envelope"></span></a>
+        <a href="http://www.github.com/cerinman"><span class="fa fa-github"></span></a>
+        <a href="http://www.twitter.com/tommy_dugger"><span class="fa fa-twitter"></span></a>   
+      </div>
+    </footer>
+    <div id="mountain">
+      <img src="../images/mountains.png" alt="Mountains">
+    </div>
+  </div>
+</body>
+</html>
+<script language="javascript" type="text/javascript" src="../scripts/time.js"></script>
