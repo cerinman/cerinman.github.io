@@ -12,7 +12,7 @@ $(document).ready(function(){
   animateCloud("#cloud2");
 
   /* Star animating the sun up and down*/
-  animateSunDown(100000);
+  animateSunDown(70000);
 });
 
 /* Gets a random set of heigh/width coords for use in the animateCloud function*/
@@ -28,15 +28,15 @@ function getNewPostiion(){
 
 /* Sets the sun.png image down beind the content div.*/
 function animateSunDown(delay){
-  $("#sun").animate({ top: 500 }, delay, function(){
-    animateSunUp(100000);
+  $("#sun").stop(true).animate({ top: 500 }, delay, function(){
+    animateSunUp(70000);
   });
 }
 
 /* Raises the sun.png image up to it's original position above the nav bar.*/
 function animateSunUp(delay){
-  $("#sun").animate({ top: 20 }, delay, function(){
-    animateSunDown(100000);
+  $("#sun").stop(true).animate({ top: 20 }, delay, function(){
+    animateSunDown(70000);
   });
 }
 
@@ -44,7 +44,7 @@ function animateSunUp(delay){
 function animateCloud(name){
   var newPostion = getNewPostiion();
 
-  $(name).animate({ top: newPostion[0], left: newPostion[1]}, 40000, function(){
+  $(name).stop(true).animate({ top: newPostion[0], left: newPostion[1]}, 30000, function(){
     animateCloud(name);
   });
 }

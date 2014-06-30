@@ -134,8 +134,8 @@ p{
 
 #article p img{
 	width: 100%;
-	margin-top: 15px;
-	margin-bottom: 15px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	border: 3px solid #222;
 	-webkit-box-shadow: 12px 12px 6px -6px #777;
 	   -moz-box-shadow: 12px 12px 6px -6px #777;
@@ -281,7 +281,7 @@ nav a{
 }
 
 #nav{
-	width: 350px;
+	width: 250px;
 	padding: 10px;
 	float: right;
 }
