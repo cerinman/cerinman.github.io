@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="../stylesheets/reset.css">
+  <link rel="stylesheet" href="../stylesheets/site.css">
+  <link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <title>Week 8 - Blog Redesign</title>
+</head>
+<body>
+<div id="sun">
+  <img src="../images/sun.png" alt="sun">
+</div>
+<div id="cloud1">
+  <img src="../images/cloud1.png" alt="cloud">
+</div>
+<div id="cloud2">
+  <img src="../images/cloud2.png" alt="cloud">
+</div>
+  <div id="main">
+    <header>
+      <div id="logo">
+        <a href="http://cerinman.github.io">
+          <img src="../images/logo.png" alt="Tommy Dugger">
+        </a>
+      </div>
+      <div id="clock">
+        
+      </div>
+      <nav>
+        <div id="nav">
+          <a href="Http://cerinman.github.io">Home</a>
+          <a href="../blog.html">Blog</a>
+          <a href="../about.html">About</a>
+          <a href="../dbc.html">DBC</a>
+          <a href="../resources.html">Resources</a>          
+        </div>
+      </nav>
+    </header>
+    <section id="content">
+      <div id="article">
+        <h2>Week 8 - Blog Redesign</h2>
+        <div id="text">
+          <p>
+            <img src="../images/blog.jpg" alt="Blog">
+          </p>
+          <h2>The Challenge</h2>
+          <p>
+            I'm in the final stretch for my phase 0 prep work for DBC.  These last two weeks are all about
+            review and we have some freedom to choose what we work on.  One of those options was to update the
+            design of our personal github.io websites that we use to blog.
+          </p>
+          <p>
+            I've been pretty satisfied with my layout but there have been some things bothering me about the
+            design since I got it up and running back in week 2.  That seems forever ago now.  Here is the list
+            of things that were bothering me and what I did to address them.
+          </p>
+          <p>
+            <ul class="fa-ul">
+              <li><i class="fa-li fa fa-check"></i>
+                Color Scheme to Dark
+              </li>
+              <li><i class="fa-li fa fa-check"></i>
+                Gradient Color Backgrounds made some text hard to read
+              </li>
+              <li><i class="fa-li fa fa-check"></i>
+                Blog posts not easily accessed from central location
+              </li>
+              <li><i class="fa-li fa fa-check"></i>
+                Font for general text to small and spacing to close
+              </li>
+              <li><i class="fa-li fa fa-check"></i>
+                List items poorly spaced and formatted with no bullets
+              </li>
+              <li><i class="fa-li fa fa-check"></i>
+                Background not fun enough
+              </li>
+            </ul>
+          </p>
+          <h2>Color Scheme to Dark</h2>
+          <p>
+            From the get go I felt the background color was to dark for idea of a mountain scene that I wanted to
+            depict.  I attempted some changes but ran out of time back in week 2.  This time around I was sure to
+            go much lighter with not only the background but also the background color of the nav bar, main section,
+            and footer elements.  The lighter color really makes reading text much easier on the eyes and provides
+            a much more pleasant reading experience.
+          </p>
+          <h2>Gradient Color Backgrounds Distracting</h2>
+          <p>
+            The gradients for backgrounds was a cool idea but it was distracting and made it hard to read some text
+            depending on its location.  The main background still retains it's gradient but it is much more subtle
+            and gives the impression of the sky.
+          </p>
+          <p>
+            The gradient for the nav bar, main section, and footer were removed all together.  The solid lighter color
+            looks much more pleasing and makes reading text simple.
+          </p>
+          <h2>Blog posts not organized and easily accessed</h2>
+          <p>
+            The more we get into DBC the more I started to realize that the blog posts are the main point of our github.io
+            websites.  It's here that we want to show off what we are learning as well as our ability to contribute to the
+            tech community at large.  Because of this I wanted my website to really be about my blog posts.
+          </p>
+          <p>
+            I moved the posts all to their own directory and then provided a main page where you can scroll through my 
+            posts by date.  Each preview on this page is just a small excerpt from the larger post and allows for quick
+            access to the full post.
+          </p>
+          <p>
+            I also left the blog posts linked in my unit directory for phase 0 that I now moved under the DBC link.  This
+            makes for a cleaner approach and works well I think.
+          </p>
+          <h2>Rethinking Font Size and Spacing</h2>
+          <p>
+            My Font size and spacing was driving me nuts!  I looked at other peoples blogs and started to notice that their
+            font sizes where much larger and had a greater spacing between lines.  After some research and some playing
+            I finally came to a font, font size, and font spacing that I think really makes for an easy read.
+          </p>
+          <p>
+            Hats off to <a href="http://wh1tney.github.io">Whitney O'Banner</a> and her blog for 
+            giving me the inspiration for getting my fonts right!
+          </p>
+          <h2>List items poorly formatted</h2>
+          <p>
+            My CSS for unordered list items was horrid!  The padding and margins made lists indent way to far.  I also hated
+            that I had no bullet icons for each item in the list.  Since I love lists, I had to take the time to fix this!
+          </p>
+          <p>
+            I knocked back the padding and margin and then followed up by using FontAwesome to add some checks as bullets.
+            I also decreased the font size on unordered lists so that they stand out a bit more.  The end result turned out
+            great.
+          </p>
+          <h2>Back ground needs to be fun!</h2>
+          <p>
+            Not that the mountains weren't fun but I wanted to add some clouds and a sun.  Once I did that I had to make them
+            move!
+          </p>
+          <p>
+            I dug into jQuery and found the animation method that allows for moving HTML elements around the page and I was 
+            soon having fun.  A word of caution!  Memory leaks through JavaScript are real and I had one that I had to solve
+            from implementing my animations.  Making sure to end each animation before starting the next solved the problem
+            and the end result is pretty cool.  Take a look at my.js files if you want to see how I get things moving.
+          </p>
+          <h2>Feedback</h2>
+          <p>
+            Next I sent my redesign over to Matt Chan to get some feedback.  It's always nice to have some ideas as to what
+            is working and what is nice.  Matt was nice enough to point out that my landing page was a bit much with my
+            twitter feed and about me all crammed together into a single page.
+          </p>
+          <p>
+            He showed me some examples of simple and clean landing pages that really looked nice so I decided to opt for simple
+            vs crazy.  I removed the nav bar, main section, and footer elements all together and simply spelled out my name,
+            centered it in the middle of my mountain scene and added a couple of links below it.  The effect is pretty cool and
+            I have to thank Matt for the idea.
+          </p>
+          <h2>Conclusion</h2>
+          <p>
+            A much needed revamp and a more professional and fun website as a result.  The process was fun but I fear I spent
+            a good amount of time playing around with jQuery animations.  Please send me feed back on the changes and let me
+            know what you think.  I had fun getting it set up and I hope you enjoy it.
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div id="footerLeft">
+        Tommy Dugger 2014 DBC
+      </div>
+      <div id="footerLinks">
+        <a href="mailto:tommy.dugger78@gmail.com"><span class="fa fa-envelope"></span></a>
+        <a href="http://www.github.com/cerinman"><span class="fa fa-github"></span></a>
+        <a href="http://www.twitter.com/tommy_dugger"><span class="fa fa-twitter"></span></a>   
+      </div>
+    </footer>
+    <div id="mountain">
+      <img src="../images/mountains.png" alt="Mountains">
+    </div>
+  </div>
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+<script language="javascript" type="text/javascript" src="../scripts/my.js"></script>
