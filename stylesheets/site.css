@@ -240,6 +240,33 @@ footer a{
 	height: 75%;
 }
 
+#landing{
+	width: 30%;
+	font-family: 'Bangers', cursive;
+	font-size: 4em;
+	position: absolute;
+	text-align: center;
+	margin-top: -15%;
+	margin-left: -15%;
+	top: 50%;
+	left: 50%;
+	z-index: 1;
+}
+
+#landing img{
+	width: 150px;
+	height: 150px;
+}
+
+#landing a{
+	text-decoration: none;
+}
+
+#landing p{
+	font-family: Verdana;
+	font-size: .3em;
+}
+
 #mountain{
 	position: fixed;
 	margin: 0;
@@ -281,7 +308,7 @@ nav a{
 }
 
 #nav{
-	width: 250px;
+	width: 325px;
 	padding: 10px;
 	float: right;
 }
@@ -315,16 +342,21 @@ a:hover{
 	position: fixed;
 	left: 50%;
 	top: 20px;
-}
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);	
+ }
 
 #cloud1{
 	z-index: -50;
 	position: fixed;
-  -webkit-filter: blur(1px);
-  -moz-filter: blur(1px);
-  -o-filter: blur(1px);
-  -ms-filter: blur(1px);
-  filter: blur(1px);	
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);	
 }
 
 #cloud2{
@@ -332,11 +364,11 @@ a:hover{
 	position: fixed;
 	left: 800px;
 	top: 100px;
-  -webkit-filter: blur(2px);
-  -moz-filter: blur(2px);
-  -o-filter: blur(2px);
-  -ms-filter: blur(2px);
-  filter: blur(2px);
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
 }
 
 .shadow {
