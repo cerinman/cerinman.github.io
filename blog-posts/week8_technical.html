@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="../stylesheets/reset.css">
+  <link rel="stylesheet" href="../stylesheets/site.css">
+  <link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <title>Week 8 Technical Blog - Active Record</title>
+</head>
+<body>
+<div id="sun">
+  <img src="../images/sun.png" alt="sun">
+</div>
+<div id="cloud1">
+  <img src="../images/cloud1.png" alt="cloud">
+</div>
+<div id="cloud2">
+  <img src="../images/cloud2.png" alt="cloud">
+</div>
+  <div id="main">
+    <header>
+      <div id="logo">
+        <a href="http://cerinman.github.io">
+          <img src="../images/logo.png" alt="Tommy Dugger">
+        </a>
+      </div>
+      <div id="clock">
+        
+      </div>
+      <nav>
+        <div id="nav">
+          <a href="Http://cerinman.github.io">Home</a>
+          <a href="../blog.html">Blog</a>
+          <a href="../about.html">About</a>
+          <a href="../dbc.html">DBC</a>
+          <a href="../resources.html">Resources</a>          
+        </div>
+      </nav>
+    </header>
+    <section id="content">
+      <div id="article">
+        <h2>Week 8 Technical Blog - Active Record</h2>
+        <div id="text">
+          <p>
+            <img src="../images/activerecord.png" alt="Active Record">
+          </p>
+          <h2>What is Active Record?</h2>
+          <p>
+            Active Record at it's simplest is an ORM or "Object Relational Mapping". It sits between
+            your database and your code and maps your database to your code.
+            Active Record also links directly to the "Model" in Model, View, Controller(MVC) of the Rails
+            framework.
+          </p>
+          <p>
+            With Active Record, we model our data with classes within Ruby.  These classes are then used
+            by Active Record to create and update the database for us.  There is no need to open up SQL
+            and create tables.  There are many built in methods that allow for easy schema maintenance.
+          </p>
+          <p>
+            Here are a few of the methods provided with Active Record.
+          </p>
+          <p>
+            <ul class="fa-ul">
+              <li><i class="fa-li fa fa-check"></i>
+                add_column
+              </li>
+              <li><i class="fa-li fa fa-check"></i>
+                rename_column
+              </li>
+              <li><i class="fa-li fa fa-check"></i>
+                create_table
+              </li>
+              <li><i class="fa-li fa fa-check"></i>
+                rename_table
+              </li>
+              <li><i class="fa-li fa fa-check"></i>
+                drop_table
+              </li>
+            </ul>
+          </p>
+          <p>
+            This provides a very flexible way to maintain our database schema and also takes a lot of burden
+            off the programmer as far as knowing all the details with maintaining a database.  All the 
+            programmer has to know is Ruby and the Active Record syntax.
+          </p>
+          <p>
+            Another powerful feature of Active Record is it's ability to work with multiple database types.
+            While Active Record works locally with SQLite for development it also works with pretty much all 
+            the various types of databases without modifying your code.  This is a pretty cool feature and
+            yet again minimizes the work involved in maintaining your application. 
+          </p>
+          <p>
+            Here is an example of a Ruby class that models a Person.  This class is then used to create and maintain 
+            the Persons table in the database by Active Record
+          </p>
+          <p>
+            <img src="../images/person.png" alt="Person">
+          </p>
+          <p>
+            You can see that it is pretty much a standard Ruby class other than it inherits from ActiveRecord::Base
+            and we use the attr_accessible method to set the getter and setter methods for the instance variables
+            rather than attr_accessor.  Attr_accessible is part of the rails framework and I won't cover it here
+            but feel free to look at the resource section below to find out more about it.
+          </p>
+          <h2>Conclusion</h2>
+          <p>
+            Active Record is a powerful way for programmers to manage database schema and records with minimal database
+            knowledge.  It works with many different database types and gives flexibility and control to programmers.
+          </p>
+          <p>
+            It relates directly to the model in Model View Controller and is a type of ORM or Object Relational Mapping.
+            It is used heavily for rapid prototyping and development but not always for live applications where a DB Admin
+            is involved to maintain the schema and database for the application.
+          </p>
+          <h2>Resources</h2>
+          <p>
+            <ul class="fa-ul">
+              <li><i class="fa-li fa fa-check"></i>
+                <a href="http://code.tutsplus.com/tutorials/active-record-the-rails-database-bridge--net-30489">Active Record: The Rails Database Bridge</a>
+              </li>
+              <li><i class="fa-li fa fa-check"></i>
+                <a href="http://rubydoc.info/gems/activerecord/4.1.2/frames">Active Record Documentation</a>
+              </li>
+              <li><i class="fa-li fa fa-check"></i>
+                <a href="http://guides.rubyonrails.org/active_record_basics.html">Active Record Basics</a>
+              </li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div id="footerLeft">
+        Tommy Dugger 2014 DBC
+      </div>
+      <div id="footerLinks">
+        <a href="mailto:tommy.dugger78@gmail.com"><span class="fa fa-envelope"></span></a>
+        <a href="http://www.github.com/cerinman"><span class="fa fa-github"></span></a>
+        <a href="http://www.twitter.com/tommy_dugger"><span class="fa fa-twitter"></span></a>   
+      </div>
+    </footer>
+    <div id="mountain">
+      <img src="../images/mountains.png" alt="Mountains">
+    </div>
+  </div>
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+<script language="javascript" type="text/javascript" src="../scripts/my.js"></script>
